@@ -7,7 +7,7 @@
     </ngx-material-timepicker-toggle>
     <ngx-material-timepicker (timeChanged)="timeinput($event)" #toggleIcon></ngx-material-timepicker>
 </div></div>
-<img src="../../../assets/images/mortdog.jpg">
+<img *ngIf="showMortdog" style="position: absolute; top: 78px; width: 80px; height: 100px; right: 130px;" src="https://github.com/SweetBabyCheesus/SweetBabyCheesus.kohleTimer.io/blob/master/assets/images/mortdog.jpg?raw=true">
 <div><span> Mortdog sieh zu, dass du &lt;t:{{timestamp}}:R&gt; auflegst!</span></div>
 <button  mat-raised-button (click)="copy()">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" width="30px" height="30px">
