@@ -5,6 +5,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ClipboardModule } from '@angular/cdk/clipboard';
 import { AppComponent } from './app.component';
 import { TimePickerComponent } from './time-picker/time-picker.component';
+import {MatButtonModule} from '@angular/material/button';
 
 @NgModule({
   declarations: [AppComponent, TimePickerComponent],
@@ -13,6 +14,7 @@ import { TimePickerComponent } from './time-picker/time-picker.component';
     NgxMaterialTimepickerModule.setLocale('de-DE'),
     BrowserAnimationsModule,
     ClipboardModule,
+    MatButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent],

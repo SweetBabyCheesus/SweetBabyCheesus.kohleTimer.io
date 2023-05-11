@@ -8,11 +8,11 @@ import {Clipboard} from '@angular/cdk/clipboard';
 })
 export class TimePickerComponent implements OnInit {
   constructor(private clipboard: Clipboard) {}
-
+  date : any;
   ngOnInit(): void {
-    const date = new Date();
+    this.date = new Date();
       // Get timestamp in Milliseconds
-  const timestamp = date.getTime(); 
+  const timestamp = this.date.getTime(); 
   console.log("aktuelles datum als timestamp: " + timestamp)
   this.timestamp = Math.floor(timestamp/1000);
    
