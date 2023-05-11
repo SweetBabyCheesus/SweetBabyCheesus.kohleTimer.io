@@ -15,6 +15,7 @@ export class TimePickerComponent implements OnInit {
   ) {}
   date: any;
   showMortdog = false;
+  showdanke = false;
   ngOnInit(): void {
     this.date = new Date();
     // Get timestamp in Milliseconds
@@ -50,6 +51,11 @@ export class TimePickerComponent implements OnInit {
       'Mortdog sieh zu, dass du <t:' + this.timestamp + ':R> auflegst!'
     );
     setTimeout(() => this.showMortdog = false, 5000)
-    this.notyf.success('Ich wünsch dir n Triple-W-Rauch ');
+    this.notyf.success('Junge, ich wünsch dir n Triple-W-Rauch!');
+    setTimeout(() => this.showdanke = true, 1500)
+    setTimeout(() => this.showdanke = false, 5000)
+  }
+  danke(){
+    
   }
 }
