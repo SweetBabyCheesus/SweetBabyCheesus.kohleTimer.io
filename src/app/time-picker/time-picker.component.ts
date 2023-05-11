@@ -41,6 +41,6 @@ export class TimePickerComponent implements OnInit {
   }
 
   copy(){
-    this.clipboard.copy("Mortdog, sieh zu dass du <t:" + this.timestamp +  ":R> auflegst!");
+    this.clipboard.copy("Mortdog sieh zu, dass du <t:" + this.timestamp +  ":R> auflegst!");
   }
 }
