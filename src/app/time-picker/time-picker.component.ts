@@ -12,7 +12,7 @@ export class TimePickerComponent implements OnInit {
   ngOnInit(): void {
     const date = new Date();
       // Get timestamp in Milliseconds
-  const timestamp = date.getTime();
+  const timestamp = date.getTime(); 
   console.log("aktuelles datum als timestamp: " + timestamp)
   this.timestamp = Math.floor(timestamp/1000);
    
@@ -41,6 +41,6 @@ export class TimePickerComponent implements OnInit {
   }
 
   copy(){
-    this.clipboard.copy("Mortdog, sieh zu dass du um <t:" + this.timestamp +  ":R> auflegst!");
+    this.clipboard.copy("Mortdog, sieh zu dass du <t:" + this.timestamp +  ":R> auflegst!");
   }
 }
