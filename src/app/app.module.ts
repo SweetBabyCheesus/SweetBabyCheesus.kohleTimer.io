@@ -5,7 +5,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ClipboardModule } from '@angular/cdk/clipboard';
 import { AppComponent } from './app.component';
 import { TimePickerComponent } from './time-picker/time-picker.component';
-import {MatButtonModule} from '@angular/material/button';
+import { MatButtonModule } from '@angular/material/button';
+import { NOTYF, notyfFactory } from '../shared/utils/notyf.token';
 
 @NgModule({
   declarations: [AppComponent, TimePickerComponent],
@@ -14,9 +15,9 @@ import {MatButtonModule} from '@angular/material/button';
     NgxMaterialTimepickerModule.setLocale('de-DE'),
     BrowserAnimationsModule,
     ClipboardModule,
-    MatButtonModule
+    MatButtonModule,
   ],
-  providers: [],
+  providers: [{ provide: NOTYF, useFactory: notyfFactory }],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
