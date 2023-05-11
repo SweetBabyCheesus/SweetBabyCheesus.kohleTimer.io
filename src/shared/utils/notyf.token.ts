@@ -13,7 +13,7 @@ export function notyfFactory(): Notyf {
       types: [
         {
           type: 'success',
-          background: 'url(https://raw.githubusercontent.com/SweetBabyCheesus/SweetBabyCheesus.kohleTimer.io/54b8ab07e17634a0745942faa1ee027662f6ceb1/assets/images/a.jpg)',
+          background: 'url(https://raw.githubusercontent.com/SweetBabyCheesus/SweetBabyCheesus.kohleTimer.io/9dab1c7e5e041f4046f0a95c564b4ed026dfb200/assets/images/c.jpg)',
         },
       ]
     });
