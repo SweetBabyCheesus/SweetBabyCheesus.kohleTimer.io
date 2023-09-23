@@ -13,3 +13,45 @@
     width: 89px;
     height: 70px;
 }
+
+.btn {
+    justify-content: center;
+    align-items: center;
+    height: fit-content;
+    padding: 10px 20px;
+    border: 1px solid #000;
+    border-radius: 5px;
+ }
+ .btn:hover {animation: shaking 0.15s infinite;}
+ @keyframes shaking {
+    0% {transform: translateX(0) rotate(0deg);}
+    25% {transform: translateX(3px) rotate(2deg);}
+    50% {transform: translateX(0px) rotate(0deg);}
+    75% {transform: translateX(-3px) rotate(-2deg);}
+    100% {transform: translateX(0px) rotate(0deg);}
+ }
+
+ .rainbow-button {
+  
+    border-radius:5px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+  }
+  .rainbow-button:after {
+    content:attr(alt);
+    background-color:#191919;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+  }
+  .rainbow-button:hover {
+    background-image: linear-gradient(90deg, #00C0FF 0%, #FFCF00 49%, #FC4F4F 80%, #00C0FF 100%);
+    animation:slidebg 2s linear infinite shaking 0.1s infinite;
+  }
+  
+  @keyframes slidebg {
+    to {
+      background-position:20vw;
+    }
+  }

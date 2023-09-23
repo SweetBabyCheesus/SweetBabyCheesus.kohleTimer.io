@@ -9,12 +9,11 @@ import { Notyf } from 'notyf';
   styleUrls: ['./time-picker.component.css'],
 })
 export class TimePickerComponent implements OnInit {
-  
   constructor(
     private clipboard: Clipboard,
     @Inject(NOTYF) private notyf: Notyf
   ) {}
-  
+
   date: any;
   timestamp: any;
   showMortdog = false;
@@ -26,9 +25,7 @@ export class TimePickerComponent implements OnInit {
     this.timestamp = Math.floor(timestamp / 1000);
   }
 
- 
-
-  timeinput(event: any) {
+  timeinput(event: any): void {
     let hour = event.slice(0, 2);
     let minute = event.slice(3, 5);
 
@@ -43,15 +40,25 @@ export class TimePickerComponent implements OnInit {
     this.timestamp = Math.floor(idk / 1000);
   }
 
-  copy() {
+  copy(): void {
+    this.notyf.dismissAll();
     setTimeout(() => (this.showMortdog = true), 55);
     this.clipboard.copy(
       'Mortdog sieh zu, dass du <t:' + this.timestamp + ':R> auflegst!'
     );
-    setTimeout(() => (this.showMortdog = false), 5000);
+    // setTimeout(() => (this.showMortdog = false), 5000);
     this.notyf.success('Junge, ich wünsch dir n <br> Triple-W-Rauch!');
     setTimeout(() => (this.showdanke = true), 1500);
-    setTimeout(() => (this.showdanke = false), 5000);
+    //   setTimeout(() => (this.showdanke = false), 5000);
   }
-  danke() {}
+
+  danke() {
+    //setTimeout(() => (this.showMortdog = false), 500);
+    this.notyf.dismissAll();
+    setTimeout(() => (this.showdanke = false), 500);
+    setTimeout(
+      () => this.notyf.error('Jajajaja gerngeschehen, <br> sieh zu jetzt!'),
+      400
+    );
+  }
 }
